@@ -1,0 +1,9 @@
+---
+layout: post
+title: "ilk"
+date: 2013-04-04 03:15
+comments: true
+categories: 
+---
+
+deneme foo
