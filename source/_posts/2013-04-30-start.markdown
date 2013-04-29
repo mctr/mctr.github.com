@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Start"
+date: 2013-04-30 01:43
+comments: true
+categories:
+---
+
+Bugün **Bloguma** yazmaya başlamaya karar verdim...
+Bu karara varmamdaki en temel sebep aslında şu cümle : **"Söz uçar Yazı kalır"**
+İnsan her ne kadar iyi hafızaya sahip olsada zaman içerisinde ugraştıgı,
+ilgilendigi, ilgi duydugu alan degişiyor.Bu yüzden neler yaptıgımı nelerle
+ugraştıgımı edindigim tecrübelerimi buraya yazmaya karar verdim.İlerde belkide
+çok işime yarayacak(ya da başka birinin işine yarayacak).Ayrıca artık
+biyerlerden başlamak lazım.
+
+Ben buradan başlamaya karar verdim.Hadi hoba başlayalım o zaman :)
+
+Bu blogumun temellerini oluştururken [@askn](http://askingedik.net/ "Aşkın Gedik")
+arkadaşıma yardımlarından dolayı teşekkürü bir borç bilirim.
