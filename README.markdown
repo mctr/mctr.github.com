@@ -1,3 +1,5 @@
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/7a150db2f9f8975421599746af250755 "githalytics.com")](http://githalytics.com/mctr/mctr.github.com)
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
