@@ -22,7 +22,7 @@ $*_*SESSION degişkenini kullanmadan önce **session*_*start()** komutunu çalı
 
 Bu yol ile session'ı şu şekilde oluşturabiliriz :
 
-```
+```php
 <?php
 $_SESSION["username"] = "mctr";
 ?>
@@ -37,7 +37,7 @@ Daha sonra da degişkeni session_register ile tanımlıyoruz.
 session_register kullanırken sayfanın başında session_start() komutunu kullanmamıza gerek yoktur.
 
 
-```
+```php
 <?php
 $foo = "bar";
 session_register("foo");
@@ -51,7 +51,7 @@ Session Okuma
 Oluşturulan Session'ı okumak için $_SESSION degişkenini kullanırız.Örnegin oluşturdugumuz sessionı okuyalım.
 
 
-```
+```php
 <?php
 session_start();
 echo "username session'nın degeri".$_SESSION["username"];
@@ -68,7 +68,7 @@ Session'ı sonlandırmak veya silmek için session_destroy komutunu kullanırız
 Mesela oluşturdugumuz sessionları silelim :
 
 
-```
+```php
 <?php
 session_start();
 session_destroy();
@@ -78,7 +78,7 @@ session_destroy();
 İstadigimiz herhangi bir session'ı sonlandırmak için de session_unregister komutunu kullanırız.Mesela "foo" sessionını sonlandıralım.
 
 
-```
+```php
 <?php
 session_start();
 session_unregister("foo");
