@@ -39,6 +39,14 @@ Gördügümüz hata mesajı sınıf veya fonksiyonun tekrar tanımlanmasıdır.
 Tabiki bunu da bir çözümü vardır.include_once ve require_once komutlarını kullanarak bu hatayı engelleyebiliriz.
 Bu komutları kullandıgımızda aynı isimli sayfayı sadece bir defa ekleyebiliriz.<br>
 <br>
+{% blockquote %}
+İnclude ile Require Arasındaki Fark
+{% endblockquote %}
+
+İnclude ve require arasındaki hataya karşı verdikleri tepkidir.Bu komutlar
+ancak eklemek istedigimiz sayfa bulunamadıgı zaman hata verir.İnclude hata mesajı verir ve sayfanın kodlarını çalıştırmaya devam eder, 
+Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
+<br>
 
 Artık include ve require'ı da biliyoruz.İstedigimiz sayfayı nasıl ekleyebilecegimizi de biliyoruz.<br>
 <br>
