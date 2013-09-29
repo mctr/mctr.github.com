@@ -43,7 +43,7 @@ Bu komutları kullandıgımızda aynı isimli sayfayı sadece bir defa ekleyebil
 İnclude ile Require Arasındaki Fark
 {% endblockquote %}
 
-İnclude ve require arasındaki hataya karşı verdikleri tepkidir.Bu komutlar
+İnclude ve require arasındaki fark hataya karşı verdikleri tepkidir.Bu komutlar
 ancak eklemek istedigimiz sayfa bulunamadıgı zaman hata verir.İnclude hata mesajı verir ve sayfanın kodlarını çalıştırmaya devam eder, 
 Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
 <br>
