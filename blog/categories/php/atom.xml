@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php | Mesut Çittir(mctr)]]></title>
+  <link href="http://mctr.github.com/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://mctr.github.com/"/>
+  <updated>2014-12-31T01:02:56+02:00</updated>
+  <id>http://mctr.github.com/</id>
+  <author>
+    <name><![CDATA[mctr]]></name>
+    <email><![CDATA[mesut.cittir@bil.omu.edu.tr]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Php'de İnclude ve Require]]></title>
+    <link href="http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require/"/>
+    <updated>2013-09-23T21:48:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require</id>
+    <content type="html"><![CDATA[<p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
+
+<p><p> Ekledigimiz sayfada sadece fonksiyonlar var ise biz fonksiyonu çagırıncaya kadar hiçbir işlem yapılmaz.Eger sınıf veya fonksiyon dışında
+kod varsa ekledigimiz satırdan itibaren eklenen sayfadaki kodlar çalıştırılır.Kodların çalıştırılması bittikten sonra ekleme yaptıgımız
+sayfadaki kodların çalıştırılmasına devam edilir.<br></p>
+
+<p>Her iki komutunda kullanım şekli aynıdır.</p>
+
+<pre><code class="php">&lt;?php
+include "includeettigimsayfa.php";
+require "requireettigimsayfa.php";
+?&gt; 
+</code></pre>
+
+<p>Burada include veya require edecegimiz sayfa ekleme yapacagımız sayfa ile aynı dizinde olması gerekir.Eger aynı dizinde
+degil ise(mesela fonksiyonlar adlı ayrı bir dizin altında olsun),
+aşagıda da gösterildigi gibi sayfanın tam yolunu yazmalıyız.<br>
+<br></p>
+
+<pre><code class="php">&lt;?php
+include "fonksiyonlar/includeettigimsayfa.php";
+require "fonksiyonlar/requireettigimsayfa.php";
+?&gt;
+</code></pre>
+
+<p>İnclude ve require kullanırken yapılabilecek hatalardan biri, aynı sayfayı birçok kez eklemektir.
+Eger ekledigimiz sayfada sınıf veya fonksiyon yer almıyorsa hata mesajı görmeyiz.Ama ekledigimiz sayfada sınıf veya
+fonksiyon yer alıyorsa hata mesajı görürüz.<br>
+<br>
+Gördügümüz hata mesajı sınıf veya fonksiyonun tekrar tanımlanmasıdır.
+Tabiki bunu da bir çözümü vardır.include_once ve require_once komutlarını kullanarak bu hatayı engelleyebiliriz.
+Bu komutları kullandıgımızda aynı isimli sayfayı sadece bir defa ekleyebiliriz.<br>
+<br>
+<blockquote><p>İnclude ile Require Arasındaki Fark</p></blockquote></p>
+
+<p>İnclude ve require arasındaki fark hataya karşı verdikleri tepkidir.Bu komutlar
+ancak eklemek istedigimiz sayfa bulunamadıgı zaman hata verir.İnclude hata mesajı verir ve sayfanın kodlarını çalıştırmaya devam eder,
+Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
+<br></p>
+
+<p>Artık include ve require&#8217;ı da biliyoruz.İstedigimiz sayfayı nasıl ekleyebilecegimizi de biliyoruz.<br>
+<br></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Php'de Session]]></title>
+    <link href="http://mctr.github.com/blog/2013/09/19/phpde-session/"/>
+    <updated>2013-09-19T21:32:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/09/19/phpde-session</id>
+    <content type="html"><![CDATA[<p>İlk olarak Php&#8217;de Session oluşturmayı ögrenelim.Daha sonra oluşturdugumuz Sessionları kullanarak sessionlarla işlem yapmayı ögrenelim.
+<blockquote><p>Session Oluşturma</p></blockquote></p>
+
+<p>Php&#8217;de Session oluşturmak için 2 yol izlenebilir.</p>
+
+<p>1.Yol :
+Ön tanımlı degişken olan $<em>_</em>SESSION degişkenini kullanmaktan geçiyor.
+$<em>_</em>SESSION degişkeni hem session oluşturabilir hemde okuyabilir.</p>
+
+<p>$<em>_</em>SESSION degişkenini kullanmadan önce <strong>session<em>_</em>start()</strong> komutunu çalıştırmalıyız.
+Çünkü bu komut sayfadaki session uygulamasını başlatır. Bu komut çalıştırılmadan session oluşturulamaz veya okunamaz.</p>
+
+<p>Bu yol ile session&#8217;ı şu şekilde oluşturabiliriz :</p>
+
+<pre><code class="php">&lt;?php
+$_SESSION["username"] = "mctr";
+?&gt;
+</code></pre>
+
+<p>2.Yol :</p>
+
+<p>session_register komutuyla yapabiliriz.Session da taşınmasını istedigimiz veriyi bir degişken halinde önceden tanımlıyoruz.
+Daha sonra da degişkeni session_register ile tanımlıyoruz.</p>
+
+<p>session_register kullanırken sayfanın başında session_start() komutunu kullanmamıza gerek yoktur.</p>
+
+<pre><code class="php">&lt;?php
+$foo = "bar";
+session_register("foo");
+?&gt;
+</code></pre>
+
+<p><blockquote><p>Session Okuma</p></blockquote></p>
+
+<p>Oluşturulan Session&#8217;ı okumak için $_SESSION degişkenini kullanırız.Örnegin oluşturdugumuz sessionı okuyalım.</p>
+
+<pre><code class="php">&lt;?php
+session_start();
+echo "username session'nın degeri".$_SESSION["username"];
+?&gt;
+</code></pre>
+
+<p>Bu sayfa açıldıgında ekranda &ldquo;mctr&rdquo; yazar.</p>
+
+<p><blockquote><p>Session Silme</p></blockquote></p>
+
+<p>Session&#8217;ı sonlandırmak veya silmek için session_destroy komutunu kullanırız.Bu komut session&#8217;a ait degerleri siler.</p>
+
+<p>Mesela oluşturdugumuz sessionları silelim :</p>
+
+<pre><code class="php">&lt;?php
+session_start();
+session_destroy();
+?&gt;
+</code></pre>
+
+<p>İstadigimiz herhangi bir session&#8217;ı sonlandırmak için de session_unregister komutunu kullanırız.Mesela &ldquo;foo&rdquo; sessionını sonlandıralım.</p>
+
+<pre><code class="php">&lt;?php
+session_start();
+session_unregister("foo");
+?&gt;
+</code></pre>
+
+<p>Session konusunda benden bu kadar..</p>
+
+<p>Herkese bol php li günler..</p>
+]]></content>
+  </entry>
+  
+</feed>

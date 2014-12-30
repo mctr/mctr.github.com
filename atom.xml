@@ -1,112 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Mesut Çittir(mctr)</title>
-  <meta name="author" content="mctr">
-
-  
-  <meta name="description" content="İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar. Ekledigimiz sayfada sadece &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><![CDATA[Mesut Çittir(mctr)]]></title>
+  <link href="http://mctr.github.com/atom.xml" rel="self"/>
+  <link href="http://mctr.github.com/"/>
+  <updated>2014-12-31T01:02:56+02:00</updated>
+  <id>http://mctr.github.com/</id>
+  <author>
+    <name><![CDATA[mctr]]></name>
+    <email><![CDATA[mesut.cittir@bil.omu.edu.tr]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <link rel="canonical" href="http://mctr.github.com">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Mesut Çittir(mctr)" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-24724378-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Mesut Çittir(mctr)</a></h1>
-  
-    <h2>mctr@mesut:~$</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:mctr.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/23/phpde-include-ve-require/">Php&#8217;de İnclude Ve Require</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-23T21:48:00+03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
+  <entry>
+    <title type="html"><![CDATA[Php'de İnclude ve Require]]></title>
+    <link href="http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require/"/>
+    <updated>2013-09-23T21:48:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require</id>
+    <content type="html"><![CDATA[<p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
 
 <p><p> Ekledigimiz sayfada sadece fonksiyonlar var ise biz fonksiyonu çagırıncaya kadar hiçbir işlem yapılmaz.Eger sınıf veya fonksiyon dışında
 kod varsa ekledigimiz satırdan itibaren eklenen sayfadaki kodlar çalıştırılır.Kodların çalıştırılması bittikten sonra ekleme yaptıgımız
@@ -155,42 +67,15 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
 
 <p>Artık include ve require&#8217;ı da biliyoruz.İstedigimiz sayfayı nasıl ekleyebilecegimizi de biliyoruz.<br>
 <br></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/19/phpde-session/">Php&#8217;de Session</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-19T21:32:00+03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>İlk olarak Php&#8217;de Session oluşturmayı ögrenelim.Daha sonra oluşturdugumuz Sessionları kullanarak sessionlarla işlem yapmayı ögrenelim.</p>
+  <entry>
+    <title type="html"><![CDATA[Php'de Session]]></title>
+    <link href="http://mctr.github.com/blog/2013/09/19/phpde-session/"/>
+    <updated>2013-09-19T21:32:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/09/19/phpde-session</id>
+    <content type="html"><![CDATA[<p>İlk olarak Php&#8217;de Session oluşturmayı ögrenelim.Daha sonra oluşturdugumuz Sessionları kullanarak sessionlarla işlem yapmayı ögrenelim.</p>
 
 <blockquote><p>Session Oluşturma</p></blockquote>
 
@@ -293,98 +178,44 @@ Daha sonra da degişkeni session_register ile tanımlıyoruz.</p>
 <p>Session konusunda benden bu kadar..</p>
 
 <p>Herkese bol php li günler..</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/30/ubuntuda-resim-boyutlandirma/">Ubuntu&#8217;da Resim Boyutlandırma</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-30T15:33:00+03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Öncelikle Windows&#8217;ta paint kullanılarak resim boyutlandırılabilir.Bunu Linux türevlerinde yapmak istersek tabiki oldukça basittir.</p>
+  <entry>
+    <title type="html"><![CDATA[Ubuntu'da resim boyutlandırma]]></title>
+    <link href="http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
+    <updated>2013-06-30T15:33:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
+    <content type="html"><![CDATA[<p>Öncelikle Windows&#8217;ta paint kullanılarak resim boyutlandırılabilir.Bunu Linux türevlerinde yapmak istersek tabiki oldukça basittir.</p>
 
 <p>İlk olarak gimp kurulmalı ve ek olarak gimp eklentilerinden&#8221;<em>gimp-plugin-registry</em>&ldquo; eklentisi kurulmalı.
 Eklenti kurulduktan sonrası çok basit.</p>
 
 <p>Gimp&#8217;i açıyoruz. Aşagıdaki şekildeki gibi üst seçeneklerden Filtreler/Batch/Batch Process  seçiyoruz.</p>
 
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/boyutlandirma.png" title="Gimp açma" alt="" /></p>
+<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/boyutlandirma.png" title="Gimp açma" alt="" /></p>
 
 <p>Daha sonra aşagıdaki gibi gelen ekranda &ldquo;Add Files&rdquo; seçiyoruz ve Bilgisayarımızdan boyutlandırmak istedigimiz resimi seçiyoruz.</p>
 
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/gimpacma.png" title="Resim Ekleme" alt="" /></p>
+<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/gimpacma.png" title="Resim Ekleme" alt="" /></p>
 
 <p>Resim seçtikten sonra üst seçeneklerden Resize seçenegini seçiyoruz ve aşagıdaki ekranda oldugu gibi seçimleri yapıyoruz.
 İstedigimiz boyutları &ldquo;Absolute&rdquo; bölümünden ayarlıyoruz ve son olarak da Start diyoruz.</p>
 
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/resize.png" title="Resim Ekleme" alt="" /></p>
+<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/resize.png" title="Resim Ekleme" alt="" /></p>
 
 <p>İşte bu kadar basit.</p>
 
 <p>Kolay gelsin.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/30/start/">Start</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-30T01:43:00+03:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Bugün <strong>Bloguma</strong> yazmaya başlamaya karar verdim&hellip;
+  <entry>
+    <title type="html"><![CDATA[Start]]></title>
+    <link href="http://mctr.github.com/blog/2013/04/30/start/"/>
+    <updated>2013-04-30T01:43:00+03:00</updated>
+    <id>http://mctr.github.com/blog/2013/04/30/start</id>
+    <content type="html"><![CDATA[<p>Bugün <strong>Bloguma</strong> yazmaya başlamaya karar verdim&hellip;
 Bu karara varmamdaki en temel sebep aslında şu cümle : <strong>&ldquo;Söz uçar Yazı kalır&rdquo;</strong>
 İnsan her ne kadar iyi hafızaya sahip olsada zaman içerisinde ugraştıgı,
 ilgilendigi, ilgi duydugu alan degişiyor.Bu yüzden neler yaptıgımı nelerle
@@ -396,117 +227,7 @@ biyerlerden başlamak lazım.</p>
 
 <p>Bu blogumun temellerini oluştururken <a href="http://askingedik.net/" title="Aşkın Gedik">@askn</a>
 arkadaşıma yardımlarından dolayı teşekkürü bir borç bilirim.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/09/23/phpde-include-ve-require/">Php&#8217;de İnclude ve Require</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/19/phpde-session/">Php&#8217;de Session</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/30/ubuntuda-resim-boyutlandirma/">Ubuntu&#8217;da resim boyutlandırma</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/30/start/">Start</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/mctr">@mctr</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'mctr',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - mctr -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
