@@ -1,7 +1,7 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-
+encoding: utf-8
 url: http://mctr.github.com
 title: Mesut Çittir(mctr)
 subtitle: mctr@mesut:~$ 
