@@ -1,12 +1,21 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-
-url: http://mctr.github.io
+<<<<<<< HEAD
+encoding: utf-8
+url: http://mctr.github.com
 title: Mesut Çittir(mctr)
 subtitle: mctr@mesut:~$ 
 author: mctr
+simple_search: http://google.com/search
+=======
+
+url: http://yoursite.com
+title: My Octopress Blog
+subtitle: A blogging framework for hackers.
+author: Your Name
 simple_search: https://www.google.com/search
+>>>>>>> c811040d45c0a0f245925ad36ebd4353f8b95b76
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
