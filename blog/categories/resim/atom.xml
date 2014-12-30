@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: resim | Mesut Çittir(mctr)]]></title>
-  <link href="http://mctr.github.com/blog/categories/resim/atom.xml" rel="self"/>
-  <link href="http://mctr.github.com/"/>
-  <updated>2014-12-31T01:02:56+02:00</updated>
-  <id>http://mctr.github.com/</id>
+  <link href="http://mctr.github.io/blog/categories/resim/atom.xml" rel="self"/>
+  <link href="http://mctr.github.io/"/>
+  <updated>2014-12-31T01:21:03+02:00</updated>
+  <id>http://mctr.github.io/</id>
   <author>
     <name><![CDATA[mctr]]></name>
     <email><![CDATA[mesut.cittir@bil.omu.edu.tr]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu'da resim boyutlandırma]]></title>
-    <link href="http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
+    <link href="http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
     <updated>2013-06-30T15:33:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
+    <id>http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
     <content type="html"><![CDATA[<p>Öncelikle Windows&#8217;ta paint kullanılarak resim boyutlandırılabilir.Bunu Linux türevlerinde yapmak istersek tabiki oldukça basittir.</p>
 
 <p>İlk olarak gimp kurulmalı ve ek olarak gimp eklentilerinden&#8221;<em>gimp-plugin-registry</em>&ldquo; eklentisi kurulmalı.

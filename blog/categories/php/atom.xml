@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: php | Mesut Çittir(mctr)]]></title>
-  <link href="http://mctr.github.com/blog/categories/php/atom.xml" rel="self"/>
-  <link href="http://mctr.github.com/"/>
-  <updated>2014-12-31T01:02:56+02:00</updated>
-  <id>http://mctr.github.com/</id>
+  <link href="http://mctr.github.io/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://mctr.github.io/"/>
+  <updated>2014-12-31T01:21:03+02:00</updated>
+  <id>http://mctr.github.io/</id>
   <author>
     <name><![CDATA[mctr]]></name>
     <email><![CDATA[mesut.cittir@bil.omu.edu.tr]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Php'de İnclude ve Require]]></title>
-    <link href="http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require/"/>
+    <link href="http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require/"/>
     <updated>2013-09-23T21:48:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require</id>
+    <id>http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require</id>
     <content type="html"><![CDATA[<p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
 
 <p><p> Ekledigimiz sayfada sadece fonksiyonlar var ise biz fonksiyonu çagırıncaya kadar hiçbir işlem yapılmaz.Eger sınıf veya fonksiyon dışında
@@ -65,9 +65,9 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
   
   <entry>
     <title type="html"><![CDATA[Php'de Session]]></title>
-    <link href="http://mctr.github.com/blog/2013/09/19/phpde-session/"/>
+    <link href="http://mctr.github.io/blog/2013/09/19/phpde-session/"/>
     <updated>2013-09-19T21:32:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/09/19/phpde-session</id>
+    <id>http://mctr.github.io/blog/2013/09/19/phpde-session</id>
     <content type="html"><![CDATA[<p>İlk olarak Php&#8217;de Session oluşturmayı ögrenelim.Daha sonra oluşturdugumuz Sessionları kullanarak sessionlarla işlem yapmayı ögrenelim.
 <blockquote><p>Session Oluşturma</p></blockquote></p>
 

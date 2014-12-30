@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Mesut Çittir(mctr)]]></title>
-  <link href="http://mctr.github.com/atom.xml" rel="self"/>
-  <link href="http://mctr.github.com/"/>
-  <updated>2014-12-31T01:02:56+02:00</updated>
-  <id>http://mctr.github.com/</id>
+  <link href="http://mctr.github.io/atom.xml" rel="self"/>
+  <link href="http://mctr.github.io/"/>
+  <updated>2014-12-31T01:21:03+02:00</updated>
+  <id>http://mctr.github.io/</id>
   <author>
     <name><![CDATA[mctr]]></name>
     <email><![CDATA[mesut.cittir@bil.omu.edu.tr]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Php'de İnclude ve Require]]></title>
-    <link href="http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require/"/>
+    <link href="http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require/"/>
     <updated>2013-09-23T21:48:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/09/23/phpde-include-ve-require</id>
+    <id>http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require</id>
     <content type="html"><![CDATA[<p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
 
 <p><p> Ekledigimiz sayfada sadece fonksiyonlar var ise biz fonksiyonu çagırıncaya kadar hiçbir işlem yapılmaz.Eger sınıf veya fonksiyon dışında
@@ -72,9 +72,9 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
   
   <entry>
     <title type="html"><![CDATA[Php'de Session]]></title>
-    <link href="http://mctr.github.com/blog/2013/09/19/phpde-session/"/>
+    <link href="http://mctr.github.io/blog/2013/09/19/phpde-session/"/>
     <updated>2013-09-19T21:32:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/09/19/phpde-session</id>
+    <id>http://mctr.github.io/blog/2013/09/19/phpde-session</id>
     <content type="html"><![CDATA[<p>İlk olarak Php&#8217;de Session oluşturmayı ögrenelim.Daha sonra oluşturdugumuz Sessionları kullanarak sessionlarla işlem yapmayı ögrenelim.</p>
 
 <blockquote><p>Session Oluşturma</p></blockquote>
@@ -183,9 +183,9 @@ Daha sonra da degişkeni session_register ile tanımlıyoruz.</p>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu'da resim boyutlandırma]]></title>
-    <link href="http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
+    <link href="http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
     <updated>2013-06-30T15:33:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
+    <id>http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
     <content type="html"><![CDATA[<p>Öncelikle Windows&#8217;ta paint kullanılarak resim boyutlandırılabilir.Bunu Linux türevlerinde yapmak istersek tabiki oldukça basittir.</p>
 
 <p>İlk olarak gimp kurulmalı ve ek olarak gimp eklentilerinden&#8221;<em>gimp-plugin-registry</em>&ldquo; eklentisi kurulmalı.
@@ -193,16 +193,16 @@ Eklenti kurulduktan sonrası çok basit.</p>
 
 <p>Gimp&#8217;i açıyoruz. Aşagıdaki şekildeki gibi üst seçeneklerden Filtreler/Batch/Batch Process  seçiyoruz.</p>
 
-<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/boyutlandirma.png" title="Gimp açma" alt="" /></p>
+<p><img src="http://mctr.github.io/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/boyutlandirma.png" title="Gimp açma" alt="" /></p>
 
 <p>Daha sonra aşagıdaki gibi gelen ekranda &ldquo;Add Files&rdquo; seçiyoruz ve Bilgisayarımızdan boyutlandırmak istedigimiz resimi seçiyoruz.</p>
 
-<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/gimpacma.png" title="Resim Ekleme" alt="" /></p>
+<p><img src="http://mctr.github.io/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/gimpacma.png" title="Resim Ekleme" alt="" /></p>
 
 <p>Resim seçtikten sonra üst seçeneklerden Resize seçenegini seçiyoruz ve aşagıdaki ekranda oldugu gibi seçimleri yapıyoruz.
 İstedigimiz boyutları &ldquo;Absolute&rdquo; bölümünden ayarlıyoruz ve son olarak da Start diyoruz.</p>
 
-<p><img src="http://mctr.github.com/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/resize.png" title="Resim Ekleme" alt="" /></p>
+<p><img src="http://mctr.github.io/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/resize.png" title="Resim Ekleme" alt="" /></p>
 
 <p>İşte bu kadar basit.</p>
 
@@ -212,9 +212,9 @@ Eklenti kurulduktan sonrası çok basit.</p>
   
   <entry>
     <title type="html"><![CDATA[Start]]></title>
-    <link href="http://mctr.github.com/blog/2013/04/30/start/"/>
+    <link href="http://mctr.github.io/blog/2013/04/30/start/"/>
     <updated>2013-04-30T01:43:00+03:00</updated>
-    <id>http://mctr.github.com/blog/2013/04/30/start</id>
+    <id>http://mctr.github.io/blog/2013/04/30/start</id>
     <content type="html"><![CDATA[<p>Bugün <strong>Bloguma</strong> yazmaya başlamaya karar verdim&hellip;
 Bu karara varmamdaki en temel sebep aslında şu cümle : <strong>&ldquo;Söz uçar Yazı kalır&rdquo;</strong>
 İnsan her ne kadar iyi hafızaya sahip olsada zaman içerisinde ugraştıgı,
