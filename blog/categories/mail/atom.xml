@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: linux | Mesut Çittir(mctr)]]></title>
-  <link href="http://mctr.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <title><![CDATA[Category: mail | Mesut Çittir(mctr)]]></title>
+  <link href="http://mctr.github.io/blog/categories/mail/atom.xml" rel="self"/>
   <link href="http://mctr.github.io/"/>
   <updated>2015-02-03T23:15:06+02:00</updated>
   <id>http://mctr.github.io/</id>
@@ -55,35 +55,6 @@ $ exiwhat  ==&gt; "Şuanda exim'in ne yaptığını gösterir"
 <p>Eger kuyruğu temizlediğiniz halde hala mail gönderme işleminde sıkıntı yaşıyorsanız, <strong> smtp </strong>  servislerinizi kontrol edin, smtp servislerini tekrar başlatın.Hala da mailleriniz gitmiyor ise sunucunuzun ip&#8217;si black list&#8217;e girmiş olabilir.Ip&#8217;nizi kontrol edin.</p>
 
 <p>Mutlu mailleşmeler :) ;)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu'da resim boyutlandırma]]></title>
-    <link href="http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma/"/>
-    <updated>2013-06-30T15:33:00+03:00</updated>
-    <id>http://mctr.github.io/blog/2013/06/30/ubuntuda-resim-boyutlandirma</id>
-    <content type="html"><![CDATA[<p>Öncelikle Windows&#8217;ta paint kullanılarak resim boyutlandırılabilir.Bunu Linux türevlerinde yapmak istersek tabiki oldukça basittir.</p>
-
-<p>İlk olarak gimp kurulmalı ve ek olarak gimp eklentilerinden&#8221;<em>gimp-plugin-registry</em>&ldquo; eklentisi kurulmalı.
-Eklenti kurulduktan sonrası çok basit.</p>
-
-<p>Gimp&#8217;i açıyoruz. Aşagıdaki şekildeki gibi üst seçeneklerden Filtreler/Batch/Batch Process  seçiyoruz.</p>
-
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/boyutlandirma.png" title="Gimp açma" alt="" /></p>
-
-<p>Daha sonra aşagıdaki gibi gelen ekranda &ldquo;Add Files&rdquo; seçiyoruz ve Bilgisayarımızdan boyutlandırmak istedigimiz resimi seçiyoruz.</p>
-
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/gimpacma.png" title="Resim Ekleme" alt="" /></p>
-
-<p>Resim seçtikten sonra üst seçeneklerden Resize seçenegini seçiyoruz ve aşagıdaki ekranda oldugu gibi seçimleri yapıyoruz.
-İstedigimiz boyutları &ldquo;Absolute&rdquo; bölümünden ayarlıyoruz ve son olarak da Start diyoruz.</p>
-
-<p><img src="/images/Ubuntu'da%20resim%20boyutland%C4%B1rma/resize.png" title="Resim Ekleme" alt="" /></p>
-
-<p>İşte bu kadar basit.</p>
-
-<p>Kolay gelsin.</p>
 ]]></content>
   </entry>
   

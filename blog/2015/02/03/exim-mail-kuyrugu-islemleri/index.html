@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Php&#8217;de İnclude ve Require - Mesut Çittir(mctr)</title>
+  <title>Exim Mail Kuyruğu İşlemleri - Mesut Çittir(mctr)</title>
   <meta name="author" content="mctr">
 
   
-  <meta name="description" content="İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar. Ekledigimiz sayfada sadece &hellip;">
+  <meta name="description" content="Exim Mail Kuyruğu Linux sunucunuzda cPanel'den veya başka bir kontrol panelinden mail gönderme işlemini yapamıyorsanız, exim mail kuyruğunuz dolmuş &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require">
+  <link rel="canonical" href="http://mctr.github.io/blog/2015/02/03/exim-mail-kuyrugu-islemleri">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mesut Çittir(mctr)" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Php&#8217;de İnclude Ve Require</h1>
+      <h1 class="entry-title">Exim Mail Kuyruğu İşlemleri</h1>
     
     
       <p class="meta">
@@ -96,62 +96,62 @@
   
 
 
-<time datetime="2013-09-23T21:48:00+03:00" pubdate data-updated="true"></time>
+<time datetime="2015-02-03T21:38:45+02:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar.</p>
+<div class="entry-content"><h2>Exim Mail Kuyruğu</h2>
 
-<p><p> Ekledigimiz sayfada sadece fonksiyonlar var ise biz fonksiyonu çagırıncaya kadar hiçbir işlem yapılmaz.Eger sınıf veya fonksiyon dışında
-kod varsa ekledigimiz satırdan itibaren eklenen sayfadaki kodlar çalıştırılır.Kodların çalıştırılması bittikten sonra ekleme yaptıgımız
-sayfadaki kodların çalıştırılmasına devam edilir.<br></p>
+<p><p>
+Linux sunucunuzda cPanel&#8217;den veya başka bir kontrol panelinden mail gönderme işlemini yapamıyorsanız, exim mail kuyruğunuz dolmuş olabilir. Bu problemi çözmek için mail kuyruğunu temizlemeniz gerekir. Mail kuyrugunu 2 şekilde temizleyebilirsiniz.</p>
 
-<p>Her iki komutunda kullanım şekli aynıdır.</p>
+<p><blockquote><p>1 - Dosya Sistemine Ulaşıp Silme</p></blockquote>
+<br>
+<p>
+İlk olarak dosya sistemine, WinScp gibi programlar ile sunucunuza bağlanıp <strong> /var/spool/exim/input </strong> dizinine ulaşın. Daha sonra burada ki tüm dosya ve dizinleri seçerek silin.Bu işlem kuyruğun doluluk oranına göre biraz zaman alabilir.İşlem tamamlandığında exim mail kuyruğunuz temizlenmiş olacaktır.</p>
 
-<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><blockquote><p>2 - Sunucuya SSH ile Bağlanıp Silme</p></blockquote></p>
+
+<p>Eger Windows kullanıyor iseniz putty ile, linux türevi bir işletim sistemi kullanıyor iseniz zaten konsoldan bağlanabilirsiniz.Burada yedek alıp da silebilirsiniz. Biz yedek alıp da silelim. Sunucuya bağlandıktan sonra, benim tercihim exim servisini durdurup daha sonra aşağıdaki işlemleri yapmaktır.
+<br>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
-</span><span class='line'><span class="k">include</span> <span class="s2">&quot;includeettigimsayfa.php&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">require</span> <span class="s2">&quot;requireettigimsayfa.php&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"> </span>
-</span></code></pre></td></tr></table></div></figure>
-Burada include veya require edecegimiz sayfa ekleme yapacagımız sayfa ile aynı dizinde olması gerekir.Eger aynı dizinde
-degil ise(mesela fonksiyonlar adlı ayrı bir dizin altında olsun),
-aşagıda da gösterildigi gibi sayfanın tam yolunu yazmalıyız.<br>
-<br></p>
-
-<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
-</span><span class='line'><span class="k">include</span> <span class="s2">&quot;fonksiyonlar/includeettigimsayfa.php&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">require</span> <span class="s2">&quot;fonksiyonlar/requireettigimsayfa.php&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>service exim stop
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> /var/spool   <span class="o">==</span>&gt; <span class="s2">&quot;/var/spool dizininin içerisine giriyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mv exim exim.old   <span class="o">==</span>&gt; <span class="s2">&quot;eximin yedeğini exim.old diye alıyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/input  <span class="o">==</span>&gt; <span class="s2">&quot;eximin içinde olması gereken dizinleri oluşturuyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/mslog
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/db
+</span><span class='line'><span class="nv">$ </span>chown -R mail:mail <span class="nv">exim</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim ve tüm alt dizin ve dosyalarının sahibini ayarlıyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>service exim <span class="nv">start</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim servisini başlattık&quot;</span>
+</span><span class='line'><span class="nv">$ </span>service exim <span class="nv">status</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim servisinin çalışıp çalışmadığını kontrol ettik&quot;</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>İnclude ve require kullanırken yapılabilecek hatalardan biri, aynı sayfayı birçok kez eklemektir.
-Eger ekledigimiz sayfada sınıf veya fonksiyon yer almıyorsa hata mesajı görmeyiz.Ama ekledigimiz sayfada sınıf veya
-fonksiyon yer alıyorsa hata mesajı görürüz.<br>
-<br>
-Gördügümüz hata mesajı sınıf veya fonksiyonun tekrar tanımlanmasıdır.
-Tabiki bunu da bir çözümü vardır.include_once ve require_once komutlarını kullanarak bu hatayı engelleyebiliriz.
-Bu komutları kullandıgımızda aynı isimli sayfayı sadece bir defa ekleyebiliriz.<br>
-<br>
-<blockquote><p>İnclude ile Require Arasındaki Fark</p></blockquote></p>
+<h3>İşinize yarayabilecek birkaç SSH Komutu</h3>
 
-<p>İnclude ve require arasındaki fark hataya karşı verdikleri tepkidir.Bu komutlar
-ancak eklemek istedigimiz sayfa bulunamadıgı zaman hata verir.İnclude hata mesajı verir ve sayfanın kodlarını çalıştırmaya devam eder,
-Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
-<br></p>
+<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>exim -bp  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunu listeler&quot;</span>
+</span><span class='line'><span class="nv">$ </span>exim -bpc  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunda kaç mail var sayısını gösterir&quot;</span>
+</span><span class='line'><span class="nv">$ </span>exim -qf  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunu tekrar işleme alır&quot;</span>
+</span><span class='line'><span class="nv">$ exiwhat</span>  <span class="o">==</span>&gt; <span class="s2">&quot;Şuanda exim&#39;in ne yaptığını gösterir&quot;</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p>Artık include ve require&#8217;ı da biliyoruz.İstedigimiz sayfayı nasıl ekleyebilecegimizi de biliyoruz.<br>
-<br></p>
+<p>Eger kuyruğu temizlediğiniz halde hala mail gönderme işleminde sıkıntı yaşıyorsanız, <strong> smtp </strong>  servislerinizi kontrol edin, smtp servislerini tekrar başlatın.Hala da mailleriniz gitmiyor ise sunucunuzun ip&#8217;si black list&#8217;e girmiş olabilir.Ip&#8217;nizi kontrol edin.</p>
+
+<p>Mutlu mailleşmeler :) ;)</p>
 </div>
 
 
@@ -174,12 +174,12 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
   
 
 
-<time datetime="2013-09-23T21:48:00+03:00" pubdate data-updated="true"></time>
+<time datetime="2015-02-03T21:38:45+02:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/php/'>php</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/mail/'>mail</a>
   
 </span>
 
@@ -188,7 +188,7 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require/" data-via="MesutCtr" data-counturl="http://mctr.github.io/blog/2013/09/23/phpde-include-ve-require/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mctr.github.io/blog/2015/02/03/exim-mail-kuyrugu-islemleri/" data-via="MesutCtr" data-counturl="http://mctr.github.io/blog/2015/02/03/exim-mail-kuyrugu-islemleri/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -199,10 +199,8 @@ Require ise hata mesajı verir ve sayfanın çalışmasını durdurur.<br>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/19/phpde-session/" title="Previous Post: Php'de Session">&laquo; Php&#8217;de Session</a>
+        <a class="basic-alignment left" href="/blog/2013/09/23/phpde-include-ve-require/" title="Previous Post: Php'de İnclude ve Require">&laquo; Php&#8217;de İnclude ve Require</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/02/03/exim-mail-kuyrugu-islemleri/" title="Next Post: Exim Mail Kuyruğu İşlemleri">Exim Mail Kuyruğu İşlemleri &raquo;</a>
       
     </p>
   </footer>

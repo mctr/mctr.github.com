@@ -9,7 +9,7 @@
   <meta name="author" content="mctr">
 
   
-  <meta name="description" content="İnclude ve require, çalışmakta oldugumuz web sayfasına dışarıdan herhangi bir dosyayı veya sayfayı eklememizi saglar. Ekledigimiz sayfada sadece &hellip;">
+  <meta name="description" content="Exim Mail Kuyruğu Linux sunucunuzda cPanel'den veya başka bir kontrol panelinden mail gönderme işlemini yapamıyorsanız, exim mail kuyruğunuz dolmuş &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,90 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/03/exim-mail-kuyrugu-islemleri/">Exim Mail Kuyruğu İşlemleri</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-03T21:38:45+02:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Exim Mail Kuyruğu</h2>
+
+<p><p>
+Linux sunucunuzda cPanel&#8217;den veya başka bir kontrol panelinden mail gönderme işlemini yapamıyorsanız, exim mail kuyruğunuz dolmuş olabilir. Bu problemi çözmek için mail kuyruğunu temizlemeniz gerekir. Mail kuyrugunu 2 şekilde temizleyebilirsiniz.</p>
+
+<p><blockquote><p>1 - Dosya Sistemine Ulaşıp Silme</p></blockquote>
+<br>
+<p>
+İlk olarak dosya sistemine, WinScp gibi programlar ile sunucunuza bağlanıp <strong> /var/spool/exim/input </strong> dizinine ulaşın. Daha sonra burada ki tüm dosya ve dizinleri seçerek silin.Bu işlem kuyruğun doluluk oranına göre biraz zaman alabilir.İşlem tamamlandığında exim mail kuyruğunuz temizlenmiş olacaktır.</p>
+
+<p><blockquote><p>2 - Sunucuya SSH ile Bağlanıp Silme</p></blockquote></p>
+
+<p>Eger Windows kullanıyor iseniz putty ile, linux türevi bir işletim sistemi kullanıyor iseniz zaten konsoldan bağlanabilirsiniz.Burada yedek alıp da silebilirsiniz. Biz yedek alıp da silelim. Sunucuya bağlandıktan sonra, benim tercihim exim servisini durdurup daha sonra aşağıdaki işlemleri yapmaktır.
+<br>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>service exim stop
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd</span> /var/spool   <span class="o">==</span>&gt; <span class="s2">&quot;/var/spool dizininin içerisine giriyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mv exim exim.old   <span class="o">==</span>&gt; <span class="s2">&quot;eximin yedeğini exim.old diye alıyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/input  <span class="o">==</span>&gt; <span class="s2">&quot;eximin içinde olması gereken dizinleri oluşturuyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/mslog
+</span><span class='line'><span class="nv">$ </span>mkdir -p exim/db
+</span><span class='line'><span class="nv">$ </span>chown -R mail:mail <span class="nv">exim</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim ve tüm alt dizin ve dosyalarının sahibini ayarlıyoruz&quot;</span>
+</span><span class='line'><span class="nv">$ </span>service exim <span class="nv">start</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim servisini başlattık&quot;</span>
+</span><span class='line'><span class="nv">$ </span>service exim <span class="nv">status</span>  <span class="o">==</span>&gt; <span class="s2">&quot;exim servisinin çalışıp çalışmadığını kontrol ettik&quot;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<h3>İşinize yarayabilecek birkaç SSH Komutu</h3>
+
+<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>exim -bp  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunu listeler&quot;</span>
+</span><span class='line'><span class="nv">$ </span>exim -bpc  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunda kaç mail var sayısını gösterir&quot;</span>
+</span><span class='line'><span class="nv">$ </span>exim -qf  <span class="o">==</span>&gt; <span class="s2">&quot;Mail kuyruğunu tekrar işleme alır&quot;</span>
+</span><span class='line'><span class="nv">$ exiwhat</span>  <span class="o">==</span>&gt; <span class="s2">&quot;Şuanda exim&#39;in ne yaptığını gösterir&quot;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Eger kuyruğu temizlediğiniz halde hala mail gönderme işleminde sıkıntı yaşıyorsanız, <strong> smtp </strong>  servislerinizi kontrol edin, smtp servislerini tekrar başlatın.Hala da mailleriniz gitmiyor ise sunucunuzun ip&#8217;si black list&#8217;e girmiş olabilir.Ip&#8217;nizi kontrol edin.</p>
+
+<p>Mutlu mailleşmeler :) ;)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -416,6 +500,10 @@ arkadaşıma yardımlarından dolayı teşekkürü bir borç bilirim.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/03/exim-mail-kuyrugu-islemleri/">Exim Mail Kuyruğu İşlemleri</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/23/phpde-include-ve-require/">Php&#8217;de İnclude ve Require</a>
       </li>
     
@@ -473,7 +561,7 @@ arkadaşıma yardımlarından dolayı teşekkürü bir borç bilirim.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - mctr -
+  Copyright &copy; 2015 - mctr -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
